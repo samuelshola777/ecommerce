@@ -6,13 +6,14 @@ import jakarta.validation.constraints.NotBlank;
 import java.util.Set;
 
 public class OrderZ {
-    @OneToMany(cascade= CascadeType.ALL)
-    private Set<Product> productList;
+    @OneToOne(cascade= CascadeType.ALL)
+   private Cart cart;
     @OneToOne(cascade= CascadeType.ALL)
     private Customer customer;
     @OneToMany(cascade= CascadeType.ALL)
     private Address deliveryAddress;
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
+
 
 }
