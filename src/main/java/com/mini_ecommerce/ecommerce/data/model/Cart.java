@@ -1,9 +1,6 @@
 package com.mini_ecommerce.ecommerce.data.model;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +13,9 @@ import java.util.Set;
 @Builder
 @Data
 public class Cart {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @OneToMany(cascade= CascadeType.ALL)
     private Set<Product> productList;
     @OneToOne(cascade = CascadeType.ALL)
