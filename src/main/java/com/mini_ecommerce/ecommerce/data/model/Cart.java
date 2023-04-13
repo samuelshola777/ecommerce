@@ -3,6 +3,7 @@ package com.mini_ecommerce.ecommerce.data.model;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,5 +18,6 @@ import java.util.Set;
 public class Cart {
     @OneToMany(cascade= CascadeType.ALL)
     private Set<Product> productList;
+    @OneToOne(cascade = CascadeType.ALL)
     private Customer customer;
 }
