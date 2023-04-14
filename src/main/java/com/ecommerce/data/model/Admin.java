@@ -1,4 +1,5 @@
-package com.mini_ecommerce.ecommerce.data.model;
+package com.ecommerce.data.model;
+
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -20,6 +21,6 @@ public class Admin {
     private String password;
     private String phoneNumber;
     @OneToOne(cascade = CascadeType.ALL)
-    private Address adminAddress;
+    private AddressZ adminAddress;
 
 }

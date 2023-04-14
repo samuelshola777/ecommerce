@@ -1,4 +1,4 @@
-package com.mini_ecommerce.ecommerce.data.model;
+package com.ecommerce.data.model;
 
 public enum OrderStatus {
     PENDING, DELIVERED, ONTRANSIT

@@ -1,4 +1,4 @@
-package com.mini_ecommerce.ecommerce.data.model;
+package com.ecommerce.data.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Address {
+public class AddressZ {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
